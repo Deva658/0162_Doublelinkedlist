@@ -94,5 +94,17 @@ public:
         int rollNo;
         cin >> rollNo;
 
+        Node *current = START;
+
+        //STEP 1: Travese the listv to find teh node
+        while (current != NULL && current->noMhs != rollNo)
+            current = current->next;
+        
+        if (current == NULL)
+        {
+            cout << "Record not found" << endl;
+            return;
+        }
+
         
 }
