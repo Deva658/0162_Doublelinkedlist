@@ -67,7 +67,7 @@ public:
 
         if (current->next != NULL && nim == current->next->noMhs)
         {
-            cout << "\nDuplicate roll numbers not allowed" << encl;
+            cout << "\nDuplicate roll numbers not allowed" << endl;
             return;
         }
 
@@ -142,7 +142,7 @@ public:
         int i = 0;
         while (currentNode != NULL)
         {
-            cout << 1 + 1 << ". " << currentNode->noMhs << " " << endl;
+            cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
             //step 3: move to next node
             currentNode = currentNode->next;
             i++;
@@ -166,4 +166,16 @@ public:
             i++;
         }
 
-};
+        //step 2: traverse backward
+        cout << "\nRecord in descending order of roll number are:\n";
+        while (currentNode != NULL)
+        {
+            cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
+            
+            //step 3: move to previous node
+            currentNode = currentNode->prev;
+            i--;
+        }
+    }
+    
+}
