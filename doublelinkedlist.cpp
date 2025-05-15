@@ -113,5 +113,10 @@ public:
             if (START != NULL)
                 START->prev = NULL;
         }
+        else
+        {
+            // STEP 3: link previous node to next of current
+            current->prev->next = current->next;
+
         
 }
